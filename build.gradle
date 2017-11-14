@@ -30,7 +30,13 @@ test {
         events "passed", "skipped", "failed", "standardOut", "standardError"
     }
    reports {
-    junitXml.enabled = true
+    reports {
+   html {
+     enabled true
+   }
+   reports.junitXml.destination = "$buildDir/test-results/MyReport"
+     reports.html.destination = "$buildDir/test-results/MyReport"
+ }
   }
 }
 
