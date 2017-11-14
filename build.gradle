@@ -3,6 +3,9 @@ apply plugin: 'war'
 apply plugin: 'application'
 apply plugin: 'com.jfrog.artifactory'
 
+version='1.0-SNAPSHOT'
+
+
 repositories {
     mavenCentral()
 }
@@ -29,7 +32,6 @@ test {
     testLogging {
         events "passed", "skipped", "failed", "standardOut", "standardError"
     }
-   reports {
     reports {
    html {
      enabled true
@@ -37,7 +39,6 @@ test {
    reports.junitXml.destination = "$buildDir/test-results/MyReport"
      reports.html.destination = "$buildDir/test-results/MyReport"
  }
-  }
 }
 
 // create Gradle wrapper with command line `gradle wrapper` in terminal
@@ -47,12 +48,4 @@ task wrapper(type: Wrapper) {
 
 mainClassName = "Main" // Main.java is located in src/main/java/Main.java
 
-buildscript {
-  repositories {
-    jcenter()
-  }
-  dependencies {
-    classpath "org.jfrog.buildinfo:build-info-extractor-gradle:latest.release"
-  }
-}
 
