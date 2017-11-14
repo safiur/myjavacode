@@ -1,6 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'war'
 apply plugin: 'application'
+apply plugin: 'com.jfrog.artifactory'
 
 repositories {
     mavenCentral()
@@ -36,3 +37,13 @@ task wrapper(type: Wrapper) {
 }
 
 mainClassName = "Main" // Main.java is located in src/main/java/Main.java
+
+buildscript {
+  repositories {
+    jcenter()
+  }
+  dependencies {
+    classpath "org.jfrog.buildinfo:build-info-extractor-gradle:latest.release"
+  }
+}
+
