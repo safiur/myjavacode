@@ -5,6 +5,14 @@ apply plugin: 'com.jfrog.artifactory'
 
 version='1.0-SNAPSHOT'
 
+buildscript {
+  repositories {
+    jcenter()
+  }
+  dependencies {
+    classpath "org.jfrog.buildinfo:build-info-extractor-gradle:latest.release"
+  }
+}
 
 repositories {
     mavenCentral()
