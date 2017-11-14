@@ -31,6 +31,7 @@ test {
     }
    reports {
     junitXml.enabled = true
+  }
 }
 
 // create Gradle wrapper with command line `gradle wrapper` in terminal
