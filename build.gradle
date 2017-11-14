@@ -29,6 +29,8 @@ test {
     testLogging {
         events "passed", "skipped", "failed", "standardOut", "standardError"
     }
+   reports {
+    junitXml.enabled = true
 }
 
 // create Gradle wrapper with command line `gradle wrapper` in terminal
