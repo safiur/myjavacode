@@ -3,9 +3,7 @@ apply plugin: 'war'
 apply plugin: 'application'
 apply plugin: 'com.jfrog.artifactory'
 version='1.0-SNAPSHOT'
-distsDirName = targets
-war.destinationDir = /java-code/build/libs
-
+project.distsDir= file('targets')
 buildscript {
   repositories {
     jcenter()
