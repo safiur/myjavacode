@@ -1,16 +1,20 @@
 apply plugin: 'java'
 apply plugin: 'war'
 apply plugin: 'application'
-apply plugin: 'sonar'
+apply plugin: 'org.sonarqube'
 version='1.0-SNAPSHOT'
 project.distsDir= file('targets')
 buildscript {
   repositories {
+    maven {
+        url "https://plugins.gradle.org/m2/"
+    }
     jcenter()
   }
 
   dependencies {
     classpath "org.jfrog.buildinfo:build-info-extractor-gradle:latest.release"
+    classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.2.1"
   }
 }
 
