@@ -8,9 +8,6 @@ buildscript {
   repositories {
     jcenter()
   }
-plugins {
-  id "org.sonarqube" version "2.6.1"
-}
 
   dependencies {
     classpath "org.jfrog.buildinfo:build-info-extractor-gradle:latest.release"
