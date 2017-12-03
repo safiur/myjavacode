@@ -12,17 +12,14 @@ repositories {
     }
   }
   dependencies {
-    classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.6"
+    classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.6.1"
   }
 
-}
-plugins {
-  id "org.sonarqube" version "2.6"
 }
 apply plugin: 'java'
 apply plugin: 'war'
 apply plugin: 'application'
-apply plugin: 'org.sonarqube'
+apply plugin: org.sonarqube.gradle.SonarQubePlugin
 version='1.0-SNAPSHOT'
 
 repositories {
