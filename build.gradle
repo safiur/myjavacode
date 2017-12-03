@@ -54,15 +54,4 @@ task wrapper(type: Wrapper) {
 
 mainClassName = "Main" // Main.java is located in src/main/java/Main.java
 
-artifactory {
-    contextUrl = "${artifactory_contextUrl}"
-    publish {
-        repository {
-            repoKey = 'example-repo-local'
-            username = "${artifactory_user}"
-            password = "${artifactory_password}"
-            maven = true
 
-   }
-}
-}       
