@@ -16,15 +16,20 @@ repositories {
   }
 
 }
-apply plugin: 'java'
-apply plugin: 'war'
-apply plugin: 'application'
-apply plugin: org.sonarqube.gradle.SonarQubePlugin
-version='1.0-SNAPSHOT'
-
 repositories {
     mavenCentral()
 }
+dependencies {
+    testCompile 'junit:junit:4.11'
+}
+
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'application'
+apply plugin: 'org.sonarqube.gradle.SonarQubePlugin'
+apply plugin: 'sonar-runner'
+version='1.0-SNAPSHOT'
+
 
 sourceSets {
     main {
@@ -38,10 +43,6 @@ sourceSets {
             srcDir 'src/test/java'
         }
     }
-}
-
-dependencies {
-    testCompile 'junit:junit:4.11'
 }
 
 test {
