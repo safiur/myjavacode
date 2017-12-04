@@ -1,0 +1,5 @@
+projectKey=myjavacode
+serverUrl=http://192.168.2.2:9000
+dashboardUrl=http://192.168.2.2:9000/dashboard/index/myjavacode
+ceTaskId=AWAgkt4OR9EZhRTRXocN
+ceTaskUrl=http://192.168.2.2:9000/api/ce/task?id=AWAgkt4OR9EZhRTRXocN
