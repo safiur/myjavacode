@@ -22,6 +22,7 @@ repositories {
 
 apply plugin: 'java'
 apply plugin: 'war'
+apply plugin: 'pmd'
 apply plugin: 'application'
 apply plugin: 'org.sonarqube'
 version='1.0-SNAPSHOT'
